@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal JSON Dashboard Generator</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> Universal JSON Dashboard Generator</h1>
+            <p>Transform any JSON data into interactive visualizations with automatic chart detection and customization
+            </p>
+
+            <div class="feature-grid">
+                
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <div class="file-input-wrapper">
+                <input type="file" id="jsonFile" accept=".json" class="file-input">
+                <button class="file-input-button"><i class="fas fa-cloud-upload-alt"></i> Upload JSON File</button>
+            </div>
+        <button id="loadSampleData" class="sample-data-btn"><i class="fas fa-database"></i></button> 
+            <div id="message"></div>
+        </div>
+
+        <div id="dataPreview" class="data-preview">
+            <h3><i class="fas fa-table"></i> Data Analysis</h3>
+            <div id="dataStructureInfo"></div>
+            <div id="dataTable" class="table-container"></div>
+        </div>
+
+        <div id="controls" class="controls">
+            <div class="filter-section">
+                <div class="filter-group">
+                    <label for="chartTypeFilter"><i class="fas fa-chart-bar"></i> Chart Type:</label>
+                    <select id="chartTypeFilter">
+                        <option value="">All Types</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchChart"><i class="fas fa-search"></i> Search Charts:</label>
+                    <input type="text" id="searchChart" placeholder="Search by title...">
+                </div>
+                <div class="filter-group">
+                    <button id="resetFilters" class="sample-data-btn" style="margin-top: 25px;"><i
+                            class="fas fa-redo"></i> Reset Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="statsGrid" class="stats-grid"></div>
+
+        <div id="dashboard" class="dashboard"></div>
+
+        <div class="footer">
+            <p> Made with ❤ by Sahil</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <script src="script.js" ></script>
+</body>
+</html>
